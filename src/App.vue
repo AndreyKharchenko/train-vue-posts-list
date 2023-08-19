@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-main class="main">
+      <PostsList/>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import { defineComponent } from 'vue'
+import PostsList from './components/Posts/PostsList.vue'
 
-export default {
+export default defineComponent({
   name: 'App',
+
   components: {
-    HelloWorld
-  }
-}
+    PostsList,
+  },
+
+  data: () => ({
+    //
+  }),
+})
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+#app .main {
+  background-color: aliceblue;
 }
 </style>
