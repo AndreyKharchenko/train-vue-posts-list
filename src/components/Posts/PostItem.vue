@@ -26,6 +26,8 @@ export default defineComponent ({
 .post {
   padding: 10px;
   width: 25vw;
+  height: auto;
+  align-self: start;
 }
 
 .post-title {
@@ -35,7 +37,7 @@ export default defineComponent ({
 
 @media screen and ( width < 720px ) {
   .post {
-    width: 90vw;
+    width: 80vw;
   }
 }
 </style>

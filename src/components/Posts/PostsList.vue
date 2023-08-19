@@ -10,7 +10,6 @@
             prepend-inner-icon="mdi-magnify"
             single-line
             hide-details
-            @click:preppend-inner="onClick"
           ></v-text-field>
       </div>
     </div>
@@ -93,10 +92,6 @@ export default defineComponent ({
 </script>
 
 <style scoped>
-.post-list-container {
-  box-sizing: border-box;
-}
-
 .filter-input-container {
   display: flex;
   justify-content: center;
@@ -114,18 +109,20 @@ export default defineComponent ({
 }
 
 .post-list {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-flow: wrap;
-  justify-content: center;
+  justify-content: space-around;
+  align-content: center;
   z-index: -1;
   gap: 10px;
+  margin-bottom: 1rem;
 }
 
 @media screen and ( width < 720px ) {
-.input {
-  width: 80%;
-}
+  .input {
+    width: 80%;
+  }
 }
 
 </style>
